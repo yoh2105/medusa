@@ -184,13 +184,10 @@ while run:
         old_y = y
         x -= vel
         CameraX -= 20
-<<<<<<< HEAD
         if x <= 20:
             x += 40
-=======
         if x <= 25:
             x += 55
->>>>>>> 52c5ad175ca0f6b8c880d46f6e53d17c23ddba79
         if CameraX <= 0:
             CameraX += 20
         #win.fill(0,0,0)
@@ -217,13 +214,10 @@ while run:
         old_y = y
         x += vel
         CameraX += 20
-<<<<<<< HEAD
         if x >= 1060:
             x -= 40
-=======
         if x >= 1030:
             x -= 55
->>>>>>> 52c5ad175ca0f6b8c880d46f6e53d17c23ddba79
         if CameraX >= 650:
             CameraX -= 20
 
@@ -251,7 +245,6 @@ while run:
 
         if y <= 20:
             y += 40
-=======
         if y <= 15:
             y += 55
         if CameraY <= 0:
@@ -279,9 +272,7 @@ while run:
         y += vel
         CameraY += 20
         if y >= 860:
-<<<<<<< HEAD
             y -= 40
-=======
             y -= 55
 
         if CameraY >= 450:
