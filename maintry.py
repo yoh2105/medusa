@@ -512,7 +512,7 @@ while run:
         hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
         pygame.display.update()
 
-
+#
 ##player is black box
 #    mob_group.draw(mapy)
 #    player.draw(win)
