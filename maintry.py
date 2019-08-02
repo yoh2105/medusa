@@ -18,6 +18,7 @@ cave = False
 town = False
 rocks = False
 appleininv = False
+journalquest = False
 
 walkLeft = ["l1.png", "l2.png", "l3.png"]
 
@@ -68,6 +69,7 @@ Ktext2 = ["Please grab me an apple from the woods.", "There's a little tree on t
 Ktext3 =["YOOOOOOOOOOOOOOOOOOOOOOO!", "BROSKI! THANKS A BUNCH!", "I think there’s a way from the forest into…", "...the cave where that foul little dude lives.", "Now if you’ll excuse me, I have some drywall to punch.", "this isn't meant to be shown"]
 Rtextwrong = ["You look under the rock for an apple.", "There is nothing underneath.", "this isn't meant to be shown"]
 Rtextright= ["Score! You found the apple.", "Bring the apple back to Kyle!", "this isn't meant to be shown"]
+Medtext1 = ["Oh, a visitor… I don’t get many of those nowadays…", "I wasn’t always like this, you know.", "I used to live in the village with the others.", "One day I wandered into the woods and a witch cursed me.", "Everytime I go into the village they get scared.", "I miss my mom.", "I need you to help me.", "Oh, you found my journal! Haven't seen that in ages.", "Give it to my friend Kyle for me.", "this isn't meant to be shown"]
 
 player = pygame.sprite.Group(hitbox.Sprite([200, 200], "f2.png"))
 mob = hitbox.npc([845, 632], "mimi.png")
@@ -80,6 +82,7 @@ rock1_group = pygame.sprite.Group()
 rock2_group = pygame.sprite.Group()
 tree_group = pygame.sprite.Group()
 rock3_group = pygame.sprite.Group()
+medusa_group = pygame.sprite.Group()
 
 character="f2.png"
 #player = pygame.image.load(character).convert_alpha()
@@ -110,9 +113,9 @@ fps = 60
 #pygame.display.flip()
 
 
-iv = pygame.sprite.Group(Circle(400,50, win,"sword.jpg"))
-iv2 = pygame.sprite.Group(Circle(400,50, win,"boy.jpg"))
-iv3 = pygame.sprite.Group(Circle(400, 50, win,"letter.jpg"))
+#iv = pygame.sprite.Group(Circle(400,50, win,"sword.jpg"))
+#iv2 = pygame.sprite.Group(Circle(400,50, win,"boy.jpg"))
+#iv3 = pygame.sprite.Group(Circle(400, 50, win,"letter.jpg"))
 iv4 = pygame.sprite.Group(Circle(400,50, win,"apple.png"))
 iv5 = pygame.sprite.Group(Circle(400,50, win, "backpack.png"))
 open_iv = False
@@ -161,7 +164,9 @@ while run:
         appleininv = True
     elif keys[pygame.K_SPACE] and x>=623 and x<=703 and y >= 146 and y <= 246 and questbegin == True and town == True and appleininv == True:
         hitbox.dialogue(Ktext3, "Kyle")
-
+    elif keys[pygame.K_SPACE] and x>=613 and x<=703 and y >= 498 and y <= 588 and cave == True and questbegin == True and appleininv == True:
+        hitbox.dialogue(Medtext1, "Medusa")
+        journalquest = True
 
     pygame.display.update()
     clock.tick(fps)
@@ -358,6 +363,7 @@ while run:
         hitbox.check_npc(rocks,663, 338,"rock1.png", mapy, rock1_group)
         hitbox.check_npc(rocks,863, 538,"rock1.png", mapy, rock2_group)
         hitbox.check_npc(rocks,1063, 438,"tree.png", mapy, tree_group)
+        hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
 
         ##
         pygame.display.update()
@@ -389,6 +395,7 @@ while run:
         hitbox.check_npc(rocks,663, 338,"rock1.png", mapy, rock1_group)
         hitbox.check_npc(rocks,863, 538,"rock1.png", mapy, rock2_group)
         hitbox.check_npc(rocks,1063, 438,"tree.png", mapy, tree_group)
+        hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
         ##
         ##
         pygame.display.update()
@@ -417,6 +424,7 @@ while run:
         hitbox.check_npc(rocks,663, 338,"rock1.png", mapy, rock1_group)
         hitbox.check_npc(rocks,863, 538,"rock1.png", mapy, rock2_group)
         hitbox.check_npc(rocks,1063, 438,"tree.png", mapy, tree_group)
+        hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
 
         ##
         ##
@@ -446,6 +454,7 @@ while run:
         hitbox.check_npc(rocks,663, 338,"rock1.png", mapy, rock1_group)
         hitbox.check_npc(rocks,863, 538,"rock1.png", mapy, rock2_group)
         hitbox.check_npc(rocks,1063, 438,"tree.png", mapy, tree_group)
+        hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
         ##
         ##
         pygame.display.update()
@@ -473,6 +482,7 @@ while run:
         hitbox.check_npc(rocks,663, 338,"rock1.png", mapy, rock1_group)
         hitbox.check_npc(rocks,863, 538,"rock1.png", mapy, rock2_group)
         hitbox.check_npc(rocks,1063, 438,"tree.png", mapy, tree_group)
+        hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
     ##
         pygame.display.update()
     if x >= 100 and x <= 200 and y <= 200 and room == False and forest == False and cave == True: #swith from cave to forest
@@ -499,6 +509,7 @@ while run:
         hitbox.check_npc(rocks,663, 338,"rock1.png", mapy, rock1_group)
         hitbox.check_npc(rocks,863, 538,"rock1.png", mapy, rock2_group)
         hitbox.check_npc(rocks,1063, 438,"tree.png", mapy, tree_group)
+        hitbox.check_npc(cave,663, 538,"medusa.png", mapy, medusa_group)
         pygame.display.update()
 
 
