@@ -2,7 +2,7 @@ import hitbox
 import pygame, sys
 from pygame.locals import *
 pygame.init()
-
+##Rita Try2
 win = pygame.display.set_mode((500,500))
 pygame.display.set_caption("First Game")
 
