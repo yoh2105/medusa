@@ -2,7 +2,7 @@ import hitbox
 import pygame, sys
 from pygame.locals import *
 pygame.init()
-
+##Rita Try2
 win = pygame.display.set_mode((500,500))
 pygame.display.set_caption("First Game")
 
@@ -61,6 +61,7 @@ class Circle(pygame.sprite.Sprite):
 
 
 questbegin = False
+journalquest = False
 
 Atext = ["Hey did you hear they stopped making socks?", "Crazy stuff right?", "Kinda weird they stopped now, I mean...", "...socks were so popular!", "Oh yea also there's a monster in the woods.", "But I mean, socks! What's up with that?", "this isn't meant to be shown"]
 Mtext = ["You don't look like you're from around here...", "...my name is Mimi!", "My sister bakes the most wonderful macarons...", "...but they're not for you! Hahaha!", "They say there's creatures in those woods.", "Normally I wouldn't care...", "...but one time a girl went in and never came back.", "this isn't meant to be shown"]
@@ -189,8 +190,10 @@ while run:
         old_y = y
         x -= vel
         CameraX -= 20
-        if x <= 0:
-            x += 14
+        if x <= 20:
+            x += 40
+        if x <= 25:
+            x += 55
         if CameraX <= 0:
             CameraX += 20
         #win.fill(0,0,0)
@@ -217,8 +220,10 @@ while run:
         old_y = y
         x += vel
         CameraX += 20
-        if x >= 1080:
-            x -= 14
+        if x >= 1060:
+            x -= 40
+        if x >= 1030:
+            x -= 55
         if CameraX >= 650:
             CameraX -= 20
 
@@ -243,8 +248,11 @@ while run:
         old_y = y
         y -= vel
         CameraY -= 20
-        if y <= 0:
-            y += 14
+
+        if y <= 20:
+            y += 40
+        if y <= 15:
+            y += 55
         if CameraY <= 0:
             CameraY += 20
 
@@ -269,8 +277,10 @@ while run:
         old_y = y
         y += vel
         CameraY += 20
-        if y >= 880:
-            y -= 14
+        if y >= 860:
+            y -= 40
+            y -= 55
+
         if CameraY >= 450:
             CameraY -= 20
 
