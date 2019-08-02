@@ -2,7 +2,7 @@ import hitbox
 import pygame, sys
 from pygame.locals import *
 pygame.init()
-
+##Rita Try2
 win = pygame.display.set_mode((500,500))
 pygame.display.set_caption("First Game")
 
@@ -110,11 +110,11 @@ fps = 60
 #pygame.display.flip()
 
 
-iv = pygame.sprite.Group(Circle(400,50, win,"sword.jpg"))
-iv2 = pygame.sprite.Group(Circle(400,50, win,"boy.jpg"))
-iv3 = pygame.sprite.Group(Circle(400, 50, win,"letter.jpg"))
-iv4 = pygame.sprite.Group(Circle(400,50, win,"apple.png"))
-iv5 = pygame.sprite.Group(Circle(400,50, win, "backpack.png"))
+iv = pygame.sprite.Group(Circle(400,50, win,"mimi.png"))
+iv2 = pygame.sprite.Group(Circle(400,50, win,"mimi.png"))
+iv3 = pygame.sprite.Group(Circle(400, 50, win,"mimi.png"))
+iv4 = pygame.sprite.Group(Circle(400,50, win,"mimi.png"))
+iv5 = pygame.sprite.Group(Circle(400,50, win, "mimi.png"))
 open_iv = False
 closed_iv = False
 
@@ -184,8 +184,13 @@ while run:
         old_y = y
         x -= vel
         CameraX -= 20
+<<<<<<< HEAD
         if x <= 20:
             x += 40
+=======
+        if x <= 25:
+            x += 55
+>>>>>>> 52c5ad175ca0f6b8c880d46f6e53d17c23ddba79
         if CameraX <= 0:
             CameraX += 20
         #win.fill(0,0,0)
@@ -212,8 +217,13 @@ while run:
         old_y = y
         x += vel
         CameraX += 20
+<<<<<<< HEAD
         if x >= 1060:
             x -= 40
+=======
+        if x >= 1030:
+            x -= 55
+>>>>>>> 52c5ad175ca0f6b8c880d46f6e53d17c23ddba79
         if CameraX >= 650:
             CameraX -= 20
 
@@ -238,8 +248,12 @@ while run:
         old_y = y
         y -= vel
         CameraY -= 20
+
         if y <= 20:
             y += 40
+=======
+        if y <= 15:
+            y += 55
         if CameraY <= 0:
             CameraY += 20
 
@@ -265,7 +279,11 @@ while run:
         y += vel
         CameraY += 20
         if y >= 860:
+<<<<<<< HEAD
             y -= 40
+=======
+            y -= 55
+
         if CameraY >= 450:
             CameraY -= 20
 

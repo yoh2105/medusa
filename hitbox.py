@@ -9,7 +9,7 @@ W_HEIGHT = 500
 screen = pygame.display.set_mode((W_WIDTH, W_HEIGHT))
 screen_rect = screen.get_rect()
 
-
+#Yoh it's mimi
 class MessageBox:
     def __init__(self, window_rect, font, message, charname):
         self.window_rect = window_rect
