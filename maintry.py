@@ -69,7 +69,7 @@ Ktext2 = ["Please grab me an apple from the woods.", "There's a little tree on t
 Ktext3 =["YOOOOOOOOOOOOOOOOOOOOOOO!", "BROSKI! THANKS A BUNCH!", "I think there’s a way from the forest into…", "...the cave where that foul little dude lives.", "Now if you’ll excuse me, I have some drywall to punch.", "this isn't meant to be shown"]
 Rtextwrong = ["You look under the rock for an apple.", "There is nothing underneath.", "this isn't meant to be shown"]
 Rtextright= ["Score! You found the apple.", "Bring the apple back to Kyle!", "this isn't meant to be shown"]
-Medtext1 = ["Oh, a visitor… I don’t get many of those nowadays…", "I wasn’t always like this, you know.", "I used to live in the village with the others.", "One day I wandered into the woods and a witch cursed me.", "Everytime I go into the village they get scared.", "I miss my mom.", "I need you to help me.", "Oh, you found my journal! Haven't seen that in ages.", "Give it to my friend Kyle for me.", "this isn't meant to be shown"]
+Medtext1 = ["Oh, a visitor… I don’t get many of those nowadays… ", "I wasn’t always like this, you know.", "I used to live in the village with the others.", "One day I wandered into the woods and a witch cursed me.", "Everytime I go into the village they get scared.", "I miss my mom.", "I need you to help me.", "Oh, you found my journal! Haven't seen that in ages.", "Give it to my friend Kyle for me.", "this isn't meant to be shown"]
 
 player = pygame.sprite.Group(hitbox.Sprite([200, 200], "f2.png"))
 mob = hitbox.npc([845, 632], "mimi.png")
